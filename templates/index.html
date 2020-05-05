@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<title>Flask Website | Home Page</title>
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<h1>Home Page</h1>
+<br>
+<main role="main">
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum porta odio et ornare.
+                Maecenas mattis a turpis vel dictum. Donec mattis quam eget sapien condimentum, vitae volutpat odio
+                elementum. In non augue scelerisque, auctor nulla vel, rhoncus nulla. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum porta odio et ornare.</p>
+            <p>
+                <a class="btn btn-primary" href="/posts" role="button">Go to posts &raquo;</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

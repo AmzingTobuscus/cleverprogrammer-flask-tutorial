@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<title>Flask Website | New Post</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<h2><b>Create new blog post:</b></h2>
+<form action="/posts/new" method="POST">
+    <label for="title">Title:</label>
+    <input class="form-control" type="text" name="title" placeholder="Enter Title" aria-label="Enter Title" id="title">
+    <br>
+    <label for="author">Author:</label>
+    <input class="form-control" type="text" name="author" placeholder="Enter Author" aria-label="Enter Author" id="author">
+    <br>
+    <label for="content">Post:</label>
+    <textarea class="form-control" name="content" placeholder="Enter Content" aria-label="Enter Content" id="content" rows="4"></textarea>
+    <br>
+    <input type="submit" value="Post">
+</form>
+<hr>
+<hr>
+
+{% endblock %}

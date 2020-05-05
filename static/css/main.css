@@ -1,0 +1,25 @@
+body {
+    background-color: lightgray;
+}
+
+.container{
+    background-color: white;
+}
+
+.posts {
+    background-color: lightgray;
+    padding: 1%;
+}
+
+.btn-success {
+    margin-top: 1%;
+}
+
+.edit-btn {
+    margin-right: 1%;
+    margin-top: 1.1%;
+}
+
+.del-btn {
+    margin-top: 1.1%;
+}

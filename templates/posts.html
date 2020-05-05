@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<title>Flask Website | Posts</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<div>
+    <h1 style="display: inline;"><b>Posts</b></h1>
+    <a style="display: inline;" class="btn btn-success float-right" href="/posts/new">+ New Post</a>
+</div>
+<hr>
+
+{% if posts|length >= 1 %}
+    {% for post in posts %}
+    <br>
+        <div class="posts">
+            <div>
+                <h2 style="display: inline;"><b>{{ post.title }}</b></h2>
+                <a style="display: inline;" class="btn btn-danger del-btn float-right" href="/posts/delete/{{ post.id }}">Delete</a>
+                <a style="display: inline;" class="btn btn-primary edit-btn float-right" href="/posts/update/{{ post.id }}">Edit</a>
+            </div>
+            
+            {% if post.author %}
+            <small>Written by: {{ post.author }} on: {{ post.date_posted.date() }}</small>
+            {% else %}
+            <small>Written by: N/A on: {{ post.date_posted.date() }}</small>
+            {% endif %}
+            <hr>
+            <p style="white-space: pre-wrap;">{{ post.content }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <h2>No posts to display</h2>
+{% endif %}
+<br>
+{% endblock %}
